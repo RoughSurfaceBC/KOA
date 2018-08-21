@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const views = require('koa-views');
 const path = require('path');
-const util = require('./util');
+const { serviceInfo } = require('./util');
 
 const app = new Koa();
 
@@ -19,5 +19,5 @@ app.use(async (ctx) => {
 })
 
 app.listen(3000, () => {
-  util.serviceInfo();
+  serviceInfo();
 })
